@@ -33,11 +33,7 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background:
-    radial-gradient(1100px 620px at 12% -8%, rgba(56, 189, 248, 0.11), transparent 62%),
-    radial-gradient(900px 560px at 92% 2%, rgba(99, 102, 241, 0.1), transparent 60%),
-    radial-gradient(800px 700px at 55% 110%, rgba(14, 165, 233, 0.06), transparent 65%),
-    var(--bg);
+  background: var(--bg);
 }
 
 body::after {
@@ -46,23 +42,18 @@ body::after {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.32;
-  background-image: radial-gradient(rgba(148, 163, 184, 0.16) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: radial-gradient(ellipse at 50% 0%, black 10%, transparent 78%);
+  opacity: 0.14;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
 [data-theme='light'] body::before {
-  background:
-    radial-gradient(1100px 620px at 12% -8%, rgba(56, 189, 248, 0.16), transparent 62%),
-    radial-gradient(900px 560px at 92% 2%, rgba(99, 102, 241, 0.12), transparent 60%),
-    radial-gradient(800px 700px at 55% 110%, rgba(14, 165, 233, 0.08), transparent 65%),
-    var(--bg);
+  background: var(--bg);
 }
 
 [data-theme='light'] body::after {
-  opacity: 0.5;
-  background-image: radial-gradient(rgba(15, 23, 42, 0.12) 1px, transparent 1px);
+  opacity: 0.16;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.1) 1px, transparent 1px);
 }
 
 h1,

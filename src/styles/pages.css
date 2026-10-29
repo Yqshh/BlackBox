@@ -11,25 +11,7 @@
 .onboarding {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(700px 260px at 15% 0%, rgba(56, 189, 248, 0.12), transparent 65%),
-    var(--grad-surface),
-    var(--surface);
-}
-
-.onboarding::after {
-  content: '';
-  position: absolute;
-  right: -80px;
-  top: -80px;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  border: 1px solid rgba(56, 189, 248, 0.16);
-  box-shadow:
-    0 0 0 34px rgba(56, 189, 248, 0.04),
-    0 0 0 70px rgba(56, 189, 248, 0.025);
-  pointer-events: none;
+  background: var(--grad-surface);
 }
 
 .onboarding__head {
@@ -65,29 +47,29 @@
   column-gap: 10px;
   row-gap: 1px;
   padding: 13px;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid var(--border);
-  background: rgba(7, 11, 20, 0.3);
+  background: var(--surface-2);
   text-align: left;
   transition: border-color 0.15s, background 0.15s, transform 0.15s;
 }
 
 [data-theme='light'] .onboarding-step {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--surface-2);
 }
 
 .onboarding-step:hover {
-  border-color: rgba(56, 189, 248, 0.3);
-  background: var(--surface-2);
+  border-color: var(--border-strong);
+  background: var(--surface-3);
   transform: translateY(-1px);
 }
 
 .onboarding-step > span {
   grid-row: 1 / span 2;
   font-family: var(--font-mono);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  color: rgba(56, 189, 248, 0.4);
+  color: var(--text-muted);
   line-height: 1;
 }
 

@@ -91,7 +91,9 @@ export function NoteEditor({
         },
       }),
       TaskList,
-      TaskItem.configure({ nested: true }),
+      // data-type дублируем явно: node view расширения не проставляет его сам,
+      // а на него опираются стили и экспорт HTML.
+      TaskItem.configure({ nested: true, HTMLAttributes: { 'data-type': 'taskItem' } }),
       Placeholder.configure({
         placeholder:
           'Пишите как в обычном редакторе. Выделите текст, чтобы сделать его жирным, или добавьте чек-лист.',

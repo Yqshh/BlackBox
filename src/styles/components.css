@@ -60,19 +60,20 @@
 
 .btn--primary {
   color: #05111f;
-  background: var(--grad-primary);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 12px 30px -14px rgba(56, 189, 248, 0.7);
+  background: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 10px -4px rgba(2, 6, 23, 0.25);
 }
 
 .btn--primary:hover:not(:disabled) {
-  filter: brightness(1.07);
+  background: var(--accent-strong);
+  filter: none;
 }
 
 .btn--secondary {
   color: var(--text);
   background: var(--surface-2);
-  border-color: var(--border);
+  border: 1px solid var(--border);
 }
 
 .btn--secondary:hover:not(:disabled) {
@@ -93,13 +94,14 @@
 
 .btn--danger {
   color: #fff;
-  background: linear-gradient(135deg, #fb7185, #e11d48);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 12px 28px -14px rgba(225, 29, 72, 0.8);
+  background: var(--rose);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 10px -4px rgba(2, 6, 23, 0.25);
 }
 
 .btn--danger:hover:not(:disabled) {
-  filter: brightness(1.06);
+  background: #d9464c;
+  filter: none;
 }
 
 .icon-btn {

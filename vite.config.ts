@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
           : {
               manualChunks: {
                 react: ['react', 'react-dom', 'react-router-dom'],
-                markdown: ['marked', 'dompurify'],
+                editor: ['@tiptap/react', '@tiptap/starter-kit', '@tiptap/markdown'],
               },
             },
       },

@@ -692,45 +692,53 @@
   padding-left: 0;
 }
 
-.rich-editor__content li[data-type='taskItem'] {
+/*
+ * Пункт чек-листа TipTap рендерит через собственный node view:
+ *   <li><label><input type="checkbox"></label><div><p>текст</p></div></li>
+ * Атрибут data-type у самого <li> в этой версии расширения не выставляется,
+ * поэтому стили цепляются за <ul data-type="taskList"> — он рендерится
+ * штатно и атрибут сохраняет.
+ */
+.rich-editor__content ul[data-type='taskList'] > li {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin: 3px 0;
+  margin: 5px 0;
 }
 
-.rich-editor__content li[data-type='taskItem'] > label {
+.rich-editor__content ul[data-type='taskList'] > li > label {
   flex: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-top: 3px;
+  margin-top: 4px;
   cursor: pointer;
 }
 
-.rich-editor__content li[data-type='taskItem'] input[type='checkbox'] {
+.rich-editor__content ul[data-type='taskList'] > li input[type='checkbox'] {
   width: 16px;
   height: 16px;
   margin: 0;
+  flex: none;
   accent-color: var(--accent);
   cursor: pointer;
 }
 
-.rich-editor__content li[data-type='taskItem'] > div {
-  flex: 1;
+.rich-editor__content ul[data-type='taskList'] > li > div {
+  flex: 1 1 auto;
   min-width: 0;
 }
 
-.rich-editor__content li[data-type='taskItem'] > div > p:last-child {
-  margin-bottom: 0;
+.rich-editor__content ul[data-type='taskList'] > li > div > p {
+  margin: 0;
 }
 
-.rich-editor__content li[data-type='taskItem'][data-checked='true'] > div {
+.rich-editor__content ul[data-type='taskList'] > li[data-checked='true'] > div {
   color: var(--text-muted);
   text-decoration: line-through;
   text-decoration-color: var(--text-faint);
 }
 
-.rich-editor__content li[data-type='taskItem'] ul[data-type='taskList'] {
+.rich-editor__content ul[data-type='taskList'] > li > div > ul[data-type='taskList'] {
   margin-top: 3px;
   margin-bottom: 0;
 }
